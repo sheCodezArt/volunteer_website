@@ -1,0 +1,509 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  background: transparent;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  margin-top: 30px;
+}
+
+header ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+.dropdown {
+  display: flex;
+  font-weight: bold;
+}
+
+.dropdown li {
+  padding-left: 35px;
+}
+
+.dropdown li:first-child a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.dropdown li:first-child a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #2bf39d;
+}
+
+/* .dropmenu {
+  padding-left: 35px;
+}
+
+.dropmenu:hover {
+  display: block;
+}
+
+.dropmenu li {
+  display: none;
+} */
+
+.dropmenu {
+  display: none;
+  position: absolute;
+  background-color: #fdc87e;
+  padding: 10px;
+  margin-top: 10px;
+  list-style: none;
+}
+
+.dropmenu li {
+  margin-bottom: 10px;
+}
+
+.dropmenu-parent:hover .dropmenu {
+  display: block;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Georgia;
+}
+
+.call i {
+  background-color: #777;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.call span {
+  margin-left: 10px;
+}
+
+/* Main styles */
+
+#home {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(7px);
+  background-image: url('kids.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#home div {
+  width: 400px;
+}
+
+#home #left-div div {
+  margin-top: 24px;
+}
+
+#home #left-div div:first-child {
+  background-color: #c1bfbfac;
+  padding: 10px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+#home #left-div div:first-child p {
+  text-align: center;
+}
+
+#home #left-div div:nth-child(2) h2 {
+  font-size: 32px;
+}
+
+#home #left-div div:nth-child(4) a {
+  background: #2bf39d;
+  border-radius: 20px;
+  padding: 12px 22px;
+  margin-left: 18px;
+  border: none;
+  color: white;
+  text-decoration: none;
+}
+
+#watch {
+  background: transparent;
+}
+
+#right-div {
+  background-color: #fff;
+  padding: 15px 35px;
+  color: #000;
+  text-align: center;
+}
+
+#right-div .amount {
+  /* display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px; */
+  display: flex;
+  margin-top: 30px;
+}
+
+#right-div .amount div {
+  background-color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #777 5px 6px 9px;
+  margin-left: 2px;
+}
+
+#right-div .amount div:not(.ten) {
+  margin-left: 25px;
+}
+
+#right-div .amount div:hover {
+  border: solid #01d796 1px;
+  color: #01d796;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+}
+
+.inputs input {
+  padding: 12px;
+  margin-top: 10px;
+  width: 320px;
+  outline: none;
+}
+
+#right-div form button {
+  background: #2bf39d;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+#right-div form button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#sub-sect {
+  height: 50vh;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#sub-sect div {
+  width: 500px;
+  box-shadow: #cfcfcf 4px 3px 7px;
+  height: 15em;
+  padding: 20px 30px;
+}
+
+#sub-sect div h3 {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+#sub-sect div p {
+  margin-top: 13px;
+  margin-bottom: 22px;
+  color: #d1cece;
+}
+
+#sub-sect div span {
+  color: #00874d;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 11px;
+  margin-top: 5px;
+}
+
+#sub-sect div span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #00874d;
+}
+
+#sub-sect div:first-child {
+  border-top: #00874d solid 7px;
+}
+
+#sub-sect div:nth-child(2) {
+  border-top: #ffa525 solid 7px;
+}
+
+#about {
+  height: 100vh;
+  width: 100%;
+}
+
+.helpNow {
+  background-image: url('edu.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpNow > span {
+  background-color: #c1bfbfac;
+  letter-spacing: 2px;
+  padding: 6px 18px;
+  font-size: 8px;
+  font-weight: bold;
+  border-radius: 15px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.helpNow > h3 {
+  font-size: 4em;
+  margin-bottom: 35px;
+}
+
+.helpNow div {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.helpNow > div span {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: white;
+  width: 250px;
+  margin: 20px;
+}
+
+.helpNow > div span i {
+  margin-bottom: 15px;
+  color: #ffa525;
+  font-size: 35px;
+}
+
+.helpNow > div span b {
+  color: #008b58;
+}
+
+#about-web {
+  color: #828282;
+  background-color: #fff;
+  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.intro-about {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  height: 33vh;
+  justify-content: space-around;
+  /* padding: 5px 50px 5px 50px; */
+}
+
+.intro-about div {
+  padding: 5px 50px;
+  width: 50%;
+}
+
+.intro-about div:first-child h4 {
+  color: #d57d01;
+  font-size: 15px;
+  padding: 4px;
+  width: 140px;
+  text-align: center;
+  border-radius: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #ffd69ccf;
+}
+
+.intro-about div:nth-child(2) {
+  display: flex;
+}
+
+.intro-about div:nth-child(2) span {
+  background-color: #ffa525;
+  display: block;
+  width: 13px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.intro-about h2 {
+  font-size: 50px;
+  letter-spacing: 2.5px;
+  color: #08b76c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.intro-about div:nth-child(2) p {
+  font-style: italic;
+  color: #008b58;
+}
+
+.about-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px 50px;
+}
+
+.about-details div {
+  width: 50%;
+}
+
+.about-details > div div:first-child {
+  border-bottom: #004a22 5px solid;
+  padding: 37px 0px;
+  height: 55px;
+}
+
+.about-details > div div:first-child a {
+  text-decoration: none;
+  color: #004a22;
+  height: 100px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.about-details > div div:first-child a:first-child {
+  background-color: #004a22;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+
+.about-details > div div:nth-child(3) p {
+  margin-top: 20px;
+}
+
+.about-details > div h2:nth-child(2) {
+  margin-top: 42px;
+  font-weight: bold;
+  font-size: 65px;
+  color: #004a22;
+}
+
+.about-details > div div:nth-child(4) {
+  margin-top: 30px;
+}
+
+.about-details > div div:nth-child(4) a {
+  text-decoration: none;
+  padding: 10px 26px;
+  border-radius: 22px;
+  /* font-weight: bold; */
+}
+
+.about-details > div div:nth-child(4) a:first-child {
+  background-color: #004a22;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.about-details > div div:nth-child(4) a:last-child {
+  color: #004a22;
+  background-color: #fff;
+  /* letter-spacing: 2px; */
+}
+
+.about-details > div:last-child {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+}
+
+.about-details > div:last-child img:first-child {
+  width: 600px;
+  height: 90%;
+  display: block;
+}
+
+.about-details > div:last-child img:last-child {
+  /* display: ; */
+  /* position: absolute;
+  transform: translateY(68px);
+  transform: translateX(20px);
+  /* z-index: 1; */
+  width: 300px;
+  height: 220px;
+  position: absolute;
+  top: 80%;
+  right: 65%;
+  transform: translateY(-20%);
+}
+
+#causes {
+  transform: translateY(500px);
+}
+
