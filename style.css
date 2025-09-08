@@ -507,6 +507,39 @@ header ul {
 }
 
 #causes {
-  transform: translateY(500px);
+  transform: translateY(430px);
+  text-align: center;
+  background-color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+}
+
+#causes div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  margin-bottom: ;
+}
+
+#causes div div h5 {
+  color: #ffa525;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  background-color: #ffd69ccf;
+  border-radius: 17px;
+  text-transform: uppercase;
+}
+
+#causes div div:nth-child(4) button {
+  padding: 8px 32px;
+  border: 0.4px solid black;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
